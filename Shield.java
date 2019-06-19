@@ -21,6 +21,9 @@ public class Shield {
         // TODO 1 : filter heroes in order to found heroes older than 59
 
         System.out.println("\nElders:");
+
+        elders = heroes.stream().filter(item -> item.getAge() >= 60).collect(Collectors.toList());
+
         for (Hero elder : elders) {
             System.out.println(elder.getName());
         }
@@ -29,6 +32,8 @@ public class Shield {
         // TODO 2 : filter heroes in order to found heroes that are gluten intolerants
 
         System.out.println("\nGluten intolerants:");
+
+        intolerants = heroes.stream().filter(item -> item.isGlutenIntolerant()).collect(Collectors.toList());
         for (Hero intolerant : intolerants) {
             System.out.println(intolerant.getName());
         }
